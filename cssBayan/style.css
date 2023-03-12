@@ -17,22 +17,9 @@
     padding: 20px 0;
 }
 
-.item .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.5rem;
-    transform: rotate(45deg);
-    transition: all 0.5s;
-}
 
-.item:hover .header img {
+.item:hover label img {
     transform: rotate(90deg);
-}
-
-.item .header img {
-    width: 1.5rem;
-    height: auto;
 }
 
 input[type="radio"] {
@@ -40,7 +27,18 @@ input[type="radio"] {
 }
 
 label {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+label img {
+    width: 1.5rem;
+    height: auto;
+    transform: rotate(45deg);
+    transition: all 0.5s;
 }
 
 .item .meme {
@@ -55,11 +53,13 @@ label {
     margin: 0 auto;
 }
 
-.item:hover .meme {
+.item:hover .meme,
+.item input:checked ~ .meme {
     height: 20rem;
     margin-top: 3rem;
 }
 
-.item:hover .meme img {
+.item:hover .meme img,
+.item input:checked ~ .meme img {
     height: 100%;
 }
