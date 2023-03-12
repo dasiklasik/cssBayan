@@ -14,11 +14,9 @@
     cursor: pointer;
     border-bottom: 0.1rem solid grey;
     border-top: 0.1rem solid grey;
-    padding: 20px 0;
 }
 
-
-.item:hover label img {
+.item:hover label .header img {
     transform: rotate(90deg);
 }
 
@@ -27,22 +25,27 @@ input[type="radio"] {
 }
 
 label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 1.5rem;
     width: 100%;
     cursor: pointer;
+    padding: 20px 0;
+    display: block;
 }
 
-label img {
+label .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label .header img {
     width: 1.5rem;
     height: auto;
     transform: rotate(45deg);
     transition: all 0.5s;
 }
 
-.item input:checked ~ label img {
+.item input:checked ~ label .header img {
     transform: rotate(90deg);
 }
 
@@ -59,13 +62,13 @@ label img {
 }
 
 .item:hover .meme,
-.item input:checked ~ .meme {
+.item input:checked ~ label .meme {
     height: 20rem;
     margin-top: 3rem;
 }
 
 .item:hover .meme img,
-.item input:checked ~ .meme img {
+.item input:checked ~ label .meme img {
     height: 100%;
 }
 
