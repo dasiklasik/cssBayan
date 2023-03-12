@@ -42,6 +42,10 @@ label img {
     transition: all 0.5s;
 }
 
+.item input:checked ~ label img {
+    transform: rotate(90deg);
+}
+
 .item .meme {
     height: 0;
     display: block;
