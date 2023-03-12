@@ -68,3 +68,39 @@ label img {
 .item input:checked ~ .meme img {
     height: 100%;
 }
+
+@media screen and (max-width: 820px) {
+    body {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    label img {
+        width: 1rem;
+    }
+
+    .item:hover .meme img,
+    .item input:checked ~ .meme img {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 12px;
+    }
+
+    .item .meme img {
+        height: auto;
+        width: 0;
+    }
+
+    .item:hover .meme img,
+    .item input:checked ~ .meme img {
+        height: auto;
+        width: 95%;
+    }
+}
